@@ -1,13 +1,16 @@
 
 const fs = require('fs');
 
-// run check to see if a third argument exists
-if (process.argv.length < 2) {
-    console.log('To proceed you must enter the name of the file, containing the list of names you wish to sort');
-} else {
-    readFile(process.argv[2]);
+function validateArguments() {
+    // run check to see if a third argument exists
+    if (process.argv.length < 2) {
+        console.log('To proceed you must enter the name of the file, containing the list of names you wish to sort');
+    } else {
+        readFile(process.argv[2]);
+    }
 }
 
+validateArguments;
 
 function readFile(filename) {
     fs.readFile(filename, 'utf-8', function (err, data) {
