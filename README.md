@@ -7,7 +7,7 @@ a project to read a txt file of names, sort and print to the console then write 
 Using node to read a .txt file container a list of unsorted names, before sorting them and writing a new file containing the now sorted list of names
 
 
-## To Use
+## To Use will need node.js installed.
 
 users can copy the file to there local storage
 
