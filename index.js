@@ -1,22 +1,21 @@
-
 const fs = require('fs');
 
 function validateArguments() {
-    // run check to see if a third argument exists
-    if (process.argv.length < 2) {
-        console.log('To proceed you must enter the name of the file, containing the list of names you wish to sort');
-    } else {
+    if ((process.argv.length > 2) && (process.argv[2].includes('txt'))) {
+        console.log('input is correct, trying to read file')
         readFile(process.argv[2]);
+    } else {
+        console.log('user must enter a valid file type, file must end in .txt')
     }
 }
 
-validateArguments;
+validateArguments();
 
 function readFile(filename) {
     fs.readFile(filename, 'utf-8', function (err, data) {
         if (err) throw err;
-
-        sortNames(data.split(/\r?\n/));
+        console.log('file read correctly');
+        console.log(data.split(/\r?\n/));
     })
 }
 
@@ -48,3 +47,5 @@ function createNewFile(sortedNames) {
         console.log(sortedNames)
     })
 }
+
+module.exports = { validateArguments, compareStrings, readFile, createNewFile };
