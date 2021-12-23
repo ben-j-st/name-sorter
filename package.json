@@ -1,0 +1,23 @@
+{
+  "name": "name-sorter",
+  "version": "1.0.0",
+  "description": "read a txt file of names, sort and print them to the console, then write a new txt file containing the sorted names",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.4.5"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-j-st/name-sorter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-j-st/name-sorter/issues"
+  },
+  "homepage": "https://github.com/ben-j-st/name-sorter#readme"
+}
